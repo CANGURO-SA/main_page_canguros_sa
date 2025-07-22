@@ -2,7 +2,7 @@
 	<nav
 		id="mainNav"
 		class="w-full flex p-1 gap-5 text-white fixed top-0 left-0 right-0 z-50 transition-colors duration-300"
-		style="background: rgba(0,0,0,0);backdrop-filter: blur(0px);-webkit-backdrop-filter: blur(0px);"
+		style="background: rgba(0,0,0,0);backdrop-filter:none;-webkit-backdrop-filter:none;"
 	>
 		<!-- Barra de progreso -->
 		<div
@@ -47,10 +47,17 @@
 			const scrollTop = window.scrollY;
 			const docHeight = document.body.scrollHeight - window.innerHeight;
 			const percent = docHeight > 0 ? scrollTop / docHeight : 0;
-			// Fondo: opacidad de 0 a 0.5 hasta 200px de scroll, blur fijo
-			const opacity = Math.min(scrollTop / 200, 0.5);
-			nav.style.background = `rgba(0, 0, 0,${opacity})`;
-			nav.style.webkitBackdropFilter = `blur(10px)`;
+			// Solo mostrar fondo y blur si hay scroll
+			if (scrollTop > 0) {
+				const opacity = Math.min(scrollTop / 200, 0.5);
+				nav.style.background = `rgba(0,0,0,${opacity})`;
+				nav.style.backdropFilter = `blur(10px)`;
+				nav.style.webkitBackdropFilter = `blur(10px)`;
+			} else {
+				nav.style.background = "rgba(0,0,0,0)";
+				nav.style.backdropFilter = "none";
+				nav.style.webkitBackdropFilter = "none";
+			}
 			progress.style.width = `${percent * 100}%`;
 		}
 		window.addEventListener("scroll", onScroll);

@@ -3,31 +3,39 @@ import Header from "../sections/header.astro";
 ---
 
 <div class="relative h-screen">
-	<img
-		src="/hero.png"
-		alt="Hero Background"
-		class="w-full h-full object-cover -z-1 absolute"
-	/>
-
-	<Header />
-	<div class="flex">
-		<div class="flex flex-col gap-2 items-start justify-center h-140 pl-10">
-			<h1
-				class="text-white text-4xl font-bold typewriter"
-				style="animation-delay: 0s;"
-			>
-				Transformamos ideas en realidad
-			</h1>
-			<p class="text-white text-2xl typewriter" style="animation-delay: 2.5s;">
-				En Cangurossa, entendemos el ritmo de tu negocio.
-			</p>
-
-			<div class="flex justify-center w-full p-2">
-				<button
-					class="bg-blue-500 text-white px-4 py-2 rounded-md hover:cursor-pointer"
+	<div class="relative w-full h-full">
+		<img
+			src="/hero.png"
+			alt="Hero Background"
+			class="w-full h-full object-cover -z-2 absolute"
+		/>
+		<div
+			class="absolute inset-0 bg-gradient-to-b -z-1 from-transparent from-80% to-[#001c44]"
+		>
+		</div>
+		<Header />
+		<div class="flex">
+			<div class="flex flex-col gap-2 items-start justify-center h-140 pl-10">
+				<h1
+					class="text-white text-4xl font-bold typewriter"
+					style="animation-delay: 0s;"
 				>
-					Conoce más
-				</button>
+					Transformamos ideas en realidad
+				</h1>
+				<p
+					class="text-white text-2xl typewriter"
+					style="animation-delay: 2.5s;"
+				>
+					En Cangurossa, entendemos el ritmo de tu negocio.
+				</p>
+
+				<div class="flex justify-center w-full p-2">
+					<button
+						class="bg-blue-500 text-white px-4 py-2 rounded-md hover:cursor-pointer"
+					>
+						Conoce más
+					</button>
+				</div>
 			</div>
 		</div>
 	</div>
