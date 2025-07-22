@@ -1,3 +1,30 @@
-<div class="bg-blue-500 h-screen flex justify-center items-center">
-	<h1 class="text-9xl underline">Hero</h1>
+---
+import Header from "../sections/header.astro";
+---
+
+<div class="relative h-screen">
+	<img
+		src="/hero.png"
+		alt="Hero Background"
+		class="w-full h-full object-cover -z-1 absolute"
+	/>
+
+	<Header />
+	<div class="flex">
+		<div class="flex flex-col gap-2 items-start justify-center h-140 pl-10">
+			<h1 class="text-white text-4xl font-bold">
+				Transformamos ideas en realidad
+			</h1>
+			<p class="text-white text-2xl">
+				En Cangurossa, entendemos el ritmo de tu negocio.
+			</p>
+			<div class="flex justify-center w-full p-2">
+				<button
+					class="bg-blue-500 text-white px-4 py-2 rounded-md hover:cursor-pointer"
+				>
+					Conoce más
+				</button>
+			</div>
+		</div>
+	</div>
 </div>
