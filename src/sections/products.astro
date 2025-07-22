@@ -1,3 +1,80 @@
-<div class="bg-green-500 h-screen">
-	<h1 class="text-9xl underline">Products</h1>
-</div>
+---
+---
+<link href="https://fonts.googleapis.com/css2?family=Geist:wght@400;600;700&display=swap" rel="stylesheet">
+<style>
+  .products-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    gap: 1.5rem;
+    width: 100%;
+	height: 100%;
+  }
+  @media (max-width: 768px) {
+    .products-grid {
+      display: flex;
+      flex-direction: column;
+      height: auto;
+    }
+    .card-producto {
+      width: 100%;
+      margin-bottom: 1.5rem;
+      height: auto;
+    }
+  }
+  .card-software { 
+    grid-column: 1;
+    grid-row: 1;
+	height: 100%;
+  }
+  .card-web { 
+    grid-column: 2;
+    grid-row: 1;
+	height: 80%;
+  }
+  .card-integraciones { 
+	margin-top: 1.5rem;
+    grid-column: 1;
+    grid-row: 2;
+	height: 80%;
+  }
+  .card-automatizacion { 
+	margin-top: 1.5rem;
+    grid-column: 2;
+    grid-row: 2;
+	height: 100%;
+  }
+</style>
+<section class="min-h-screen flex items-center justify-center bg-[#121212] py-12 font-[Geist,sans-serif] h-full">
+  <div class="w-full max-w-5xl mx-auto px-4 md:px-8 flex flex-col items-center">
+    <h2 class="text-4xl md:text-5xl font-bold text-white mb-4 text-center mt-10">Mis productos</h2>
+    <p class="text-lg md:text-xl text-[#4FB0FF] mb-10 text-center max-w-2xl">Soluciones tecnológicas a tu medida para potenciar tu negocio.</p>
+    <div class="products-grid">
+		<div class="card-container gap-4">
+      <div class="card-producto card-software bg-[#23272F] rounded-2xl shadow-2xl p-6 flex flex-col items-center justify-center border-t-4 border-[#FF6600] transition-transform hover:scale-105">
+        <span class="text-3xl mb-2 text-[#FF6600]">💻</span>
+        <h3 class="text-2xl font-semibold text-white mb-2 text-center">Desarrollo de software a medida</h3>
+        <p class="text-gray-300 text-center">Creamos soluciones únicas adaptadas a tus necesidades y objetivos.</p>
+      </div>
+      <div class="card-producto card-integraciones bg-[#23272F] rounded-2xl shadow-2xl p-6 flex flex-col items-center justify-center border-t-4 border-[#FF6600] transition-transform hover:scale-105">
+        <span class="text-3xl mb-2 text-[#FF6600]">🔗</span>
+        <h3 class="text-xl font-semibold text-white mb-2 text-center">Integraciones con sistemas existentes</h3>
+        <p class="text-gray-300 text-center">Conectamos tus herramientas actuales para que trabajen juntas de forma eficiente.</p>
+      </div>
+		</div>
+		<div class="card-container gap-4">
+		 <div class="card-producto card-web bg-[#23272F] rounded-2xl shadow-2xl p-6 flex flex-col items-center justify-center border-t-4 border-[#FF6600] transition-transform hover:scale-105">
+			<span class="text-3xl mb-2 text-[#FF6600]">📱</span>
+			<h3 class="text-xl font-semibold text-white mb-2 text-center">Plataformas web y móviles</h3>
+			<p class="text-gray-300 text-center">Desarrollamos aplicaciones modernas, responsivas y seguras para web y dispositivos móviles.</p>
+		  </div>
+
+      <div class="card-producto card-automatizacion bg-[#23272F] rounded-2xl shadow-2xl p-6 flex flex-col items-center justify-center border-t-4 border-[#FF6600] transition-transform hover:scale-105">
+        <span class="text-3xl mb-2 text-[#FF6600]">⚙️</span>
+        <h3 class="text-2xl font-semibold text-white mb-2 text-center">Automatización de procesos</h3>
+        <p class="text-gray-300 text-center">Optimizamos y automatizamos tareas para mejorar la eficiencia de tu empresa.</p>
+      </div>
+		</div>
+    </div>
+  </div>
+</section>
