@@ -8,9 +8,10 @@ import "../styles/global.css";
 		<meta charset="UTF-8" />
 		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
 		<meta name="generator" content={Astro.generator} />
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
 		<title>Astro Basics</title>
 	</head>
-	<body>
+	<body class="overflow-x-hidden">
 		<slot />
 	</body>
 </html>
@@ -18,8 +19,10 @@ import "../styles/global.css";
 <style>
 	html,
 	body {
+		z-index: -4;
 		margin: 0;
 		width: 100%;
 		height: 100%;
+		background-color: #001c44;
 	}
 </style>
