@@ -1,3 +1,133 @@
-<section id="contact_us" class="bg-purple-500 h-screen">
-	<h1 class="text-9xl underline">Contact Us</h1>
+<section
+	id="contact_us"
+	class="min-h-screen flex items-center justify-center"
+	style="background: #001c44"
+>
+	<div
+		class="w-full max-w-md rounded-lg shadow-lg p-8"
+		style="background: linear-gradient(135deg, #e88c1a 0%, #d13a0c 100%);"
+	>
+		<h1 class="text-3xl font-bold text-center text-blue-900 mb-6">
+			Contáctanos
+		</h1>
+		<form id="contactForm" class="space-y-4" method="POST">
+			<div>
+				<label
+					for="name"
+					class="block text-lg font-semibold text-blue-900"
+					>Nombre completo</label
+				>
+				<input
+					type="text"
+					id="name"
+					name="name"
+					required
+					placeholder="Ej: Juan Pérez"
+					class="mt-1 block w-full rounded-md border-2 border-blue-900 bg-blue-50 text-blue-900 shadow-sm focus:border-yellow-400 focus:ring-yellow-400 px-3 py-2 transition"
+				/>
+			</div>
+			<div>
+				<label
+					for="phone"
+					class="block text-lg font-semibold text-blue-900"
+					>Número de teléfono</label
+				>
+				<input
+					type="tel"
+					id="phone"
+					name="phone"
+					required
+					pattern="[0-9]{10,15}"
+					placeholder="Ej: 3001234567"
+					class="mt-1 block w-full rounded-md border-2 border-blue-900 bg-blue-50 text-blue-900 shadow-sm focus:border-yellow-400 focus:ring-yellow-400 px-3 py-2 transition"
+				/>
+			</div>
+			<div>
+				<label
+					for="email"
+					class="block text-lg font-semibold text-blue-900"
+					>Correo electrónico</label
+				>
+				<input
+					type="email"
+					id="email"
+					name="email"
+					required
+					placeholder="Ej: correo@ejemplo.com"
+					class="mt-1 block w-full rounded-md border-2 border-blue-900 bg-blue-50 text-blue-900 shadow-sm focus:border-yellow-400 focus:ring-yellow-400 px-3 py-2 transition"
+				/>
+			</div>
+			<div>
+				<label
+					for="comment"
+					class="block text-lg font-semibold text-blue-900"
+					>Comentario</label
+				>
+				<textarea
+					id="comment"
+					name="comment"
+					rows="4"
+					required
+					placeholder="¿En qué podemos ayudarte?"
+					class="mt-1 block w-full rounded-md border-2 border-blue-900 bg-blue-50 text-blue-900 shadow-sm focus:border-yellow-400 focus:ring-yellow-400 px-3 py-2 transition"
+				></textarea>
+			</div>
+			<button
+				type="submit"
+				class="w-full py-2 px-4 font-bold rounded-lg shadow-lg transition border-2 border-blue-900 bg-[#001c44] text-white hover:bg-[#003366] focus:bg-[#003366]"
+				style="box-shadow: 0 8px 24px 0 rgba(0,28,68,0.35);"
+				>Enviar</button
+			>
+		</form>
+		<div
+			id="formMessage"
+			class="mt-4 text-center text-green-700 font-semibold hidden"
+		>
+			¡Gracias por contactarnos!
+		</div>
+	</div>
+
+	<script>
+		document.addEventListener("DOMContentLoaded", () => {
+			const form = document.getElementById("contactForm");
+			const message = document.getElementById("formMessage");
+			if (!form) return;
+			form.addEventListener("submit", async (e) => {
+				e.preventDefault();
+				const nameInput = document.getElementById("name");
+				const phoneInput = document.getElementById("phone");
+				const emailInput = document.getElementById("email");
+				const commentInput = document.getElementById("comment");
+				if (
+					!(nameInput instanceof HTMLInputElement) ||
+					!(phoneInput instanceof HTMLInputElement) ||
+					!(emailInput instanceof HTMLInputElement) ||
+					!(commentInput instanceof HTMLTextAreaElement)
+				)
+					return;
+				const data = {
+					name: nameInput.value,
+					phone: phoneInput.value,
+					email: emailInput.value,
+					comment: commentInput.value,
+				};
+				//Aqui debería colocar el endpoint correcto para enviar el formulario o el servicio de SMTP para enviar el correo
+				// try {
+				// 	const res = await fetch("/api/contact", {
+				// 		method: "POST",
+				// 		headers: { "Content-Type": "application/json" },
+				// 		body: JSON.stringify(data),
+				// 	});
+				// 	if (res.ok) {
+				// 		if (message) message.classList.remove("hidden");
+				// 		if (form instanceof HTMLFormElement) form.reset();
+				// 	} else {
+				// 		alert("Hubo un error al enviar el mensaje.");
+				// 	}
+				// } catch {
+				// 	alert("Hubo un error al enviar el mensaje.");
+				// }
+			});
+		});
+	</script>
 </section>
