@@ -4,17 +4,15 @@
 	style="background: #001c44"
 >
 	<div
-		class="w-full max-w-md rounded-lg shadow-lg p-8"
-		style="background: linear-gradient(135deg, #e88c1a 0%, #d13a0c 100%);"
+		class="w-full max-w-md rounded-lg p-8 border-t-4 border-[#FF6600] shadow-lg"
+		style="background: linear-gradient(135deg, #012D6A 0%, #001c44 50%, #993300 100%); box-shadow: 0 8px 24px 0 rgba(255,102,0,0.25);"
 	>
-		<h1 class="text-3xl font-bold text-center text-blue-900 mb-6">
+		<h1 class="text-3xl font-bold text-center text-white mb-6">
 			Contáctanos
 		</h1>
 		<form id="contactForm" class="space-y-4" method="POST">
 			<div>
-				<label
-					for="name"
-					class="block text-lg font-semibold text-blue-900"
+				<label for="name" class="block text-lg font-semibold text-white"
 					>Nombre completo</label
 				>
 				<input
@@ -23,13 +21,13 @@
 					name="name"
 					required
 					placeholder="Ej: Juan Pérez"
-					class="mt-1 block w-full rounded-md border-2 border-blue-900 bg-blue-50 text-blue-900 shadow-sm focus:border-yellow-400 focus:ring-yellow-400 px-3 py-2 transition"
+					class="mt-1 block w-full rounded-md border-2 border-blue-900 bg-blue-50 shadow-sm focus:border-yellow-400 focus:ring-yellow-400 px-3 py-2 transition"
 				/>
 			</div>
 			<div>
 				<label
 					for="phone"
-					class="block text-lg font-semibold text-blue-900"
+					class="block text-lg font-semibold text-white"
 					>Número de teléfono</label
 				>
 				<input
@@ -39,13 +37,13 @@
 					required
 					pattern="[0-9]{10,15}"
 					placeholder="Ej: 3001234567"
-					class="mt-1 block w-full rounded-md border-2 border-blue-900 bg-blue-50 text-blue-900 shadow-sm focus:border-yellow-400 focus:ring-yellow-400 px-3 py-2 transition"
+					class="mt-1 block w-full rounded-md border-2 border-blue-900 bg-blue-50 shadow-sm focus:border-yellow-400 focus:ring-yellow-400 px-3 py-2 transition"
 				/>
 			</div>
 			<div>
 				<label
 					for="email"
-					class="block text-lg font-semibold text-blue-900"
+					class="block text-lg font-semibold text-white"
 					>Correo electrónico</label
 				>
 				<input
@@ -54,13 +52,13 @@
 					name="email"
 					required
 					placeholder="Ej: correo@ejemplo.com"
-					class="mt-1 block w-full rounded-md border-2 border-blue-900 bg-blue-50 text-blue-900 shadow-sm focus:border-yellow-400 focus:ring-yellow-400 px-3 py-2 transition"
+					class="mt-1 block w-full rounded-md border-2 border-blue-900 bg-blue-50 shadow-sm focus:border-yellow-400 focus:ring-yellow-400 px-3 py-2 transition"
 				/>
 			</div>
 			<div>
 				<label
 					for="comment"
-					class="block text-lg font-semibold text-blue-900"
+					class="block text-lg font-semibold text-white"
 					>Comentario</label
 				>
 				<textarea
@@ -69,7 +67,7 @@
 					rows="4"
 					required
 					placeholder="¿En qué podemos ayudarte?"
-					class="mt-1 block w-full rounded-md border-2 border-blue-900 bg-blue-50 text-blue-900 shadow-sm focus:border-yellow-400 focus:ring-yellow-400 px-3 py-2 transition"
+					class="mt-1 block w-full rounded-md border-2 border-blue-900 bg-blue-50 shadow-sm focus:border-yellow-400 focus:ring-yellow-400 px-3 py-2 transition"
 				></textarea>
 			</div>
 			<button
